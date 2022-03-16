@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import './App.scss';
+import './App.scss'
 
 //Custom Componets
-import AppBar from 'components/AppBar/AppBar';
-import BoardBar from 'components/BoardBar/BoardBar';
-import BoardContent from 'components/BoardContent/BoardContent';
+import AppBar from 'components/AppBar/AppBar'
+import BoardBar from 'components/BoardBar/BoardBar'
+import BoardContent from 'components/BoardContent/BoardContent'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <BoardBar />
       <BoardContent />
     </div>
-  );
+  )
 }
 
 export default App
