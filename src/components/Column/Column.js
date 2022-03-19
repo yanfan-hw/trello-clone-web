@@ -12,6 +12,7 @@ function Column(props) {
   return (
     <div className='column'>
       <header className='column-drag-handle'>{column.title}</header>
+      {/* { cards.length !== 0 && */}
       <div className="card-list">
         <Container
           groupName="trello-colums"
@@ -22,7 +23,7 @@ function Column(props) {
           dropPlaceholder={{
             animationDuration: 150,
             showOnTop: true,
-            className: 'card-drop-preview'
+            className: 'cards-drop-preview'
           }}
           dropPlaceholderAnimationDuration={200}
         >
@@ -35,7 +36,7 @@ function Column(props) {
       </div>
       <footer>
         <div className='footer-actions'>
-          <i className='fa fa-plus icon'/>Add another card
+          <i className='fa fa-plus icon'/>Add a card
         </div>
       </footer>
     </div>
