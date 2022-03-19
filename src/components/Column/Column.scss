@@ -3,7 +3,6 @@
 $column-header-height: 46px;
 $column-footer-height: 46px;
 $column-border-radius: 5px;
-$list-bg-color: #ebecf0;
 $column-height: calc(#{$board-content-height} - #{$gap * 2});
 
 .column {
@@ -27,16 +26,19 @@ $column-height: calc(#{$board-content-height} - #{$gap * 2});
       cursor: move;
     }
     footer {
-      padding-left: 15px;
-      height: $column-header-height;
-      line-height: $column-header-height;
+      max-height: 38px;
+      min-height: 38px;
+      justify-content: space-between;
       border-bottom-left-radius: $column-border-radius;
       border-bottom-right-radius: $column-border-radius;
       color: #888;
       .footer-actions {
-        margin-left: $gap;
+        margin-bottom: 8px;
+        padding: 4px 8px;
+        border-radius: 3px;
         cursor: pointer;
         &:hover {
+          background-color: #091e4214;
           color: #333;
         }
       }
@@ -55,6 +57,11 @@ $column-height: calc(#{$board-content-height} - #{$gap * 2});
           background-color: darken($list-bg-color, 15);
           border-right: 5px solid $list-bg-color;
         }
+        .cards-drop-preview {
+          background-color: rgba(150, 150, 200, 0.1);
+          border: 1px solid #abc;
+          margin: 5px 45px 5px 5px;
+        }
         .card-ghost {
           transition: transform 0.18s ease;
           transform: rotateZ(5deg);
@@ -64,11 +71,6 @@ $column-height: calc(#{$board-content-height} - #{$gap * 2});
         .card-ghost-drop{
           transition: transform 0.18s ease-in-out;
           transform: rotateZ(0deg);
-        }
-        .card-drop-preview {
-          background-color: rgba(150, 150, 200, 0.1);
-          border: 1px dashed #abc;
-          margin: 5px;
         }
       }
   }
