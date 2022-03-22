@@ -36,7 +36,18 @@ body {
     // border: 1px solid #ccc;
   }
   .btn:focus, btn:active {
-    outline: none;
-    box-shadow: none;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .edit-title-column {
+    background-color: inherit;
+    border: none;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    &:focus {
+      background-color: white;
+      border: 1px solid #86b7fe;
+    }
   }
 }

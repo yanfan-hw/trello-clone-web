@@ -3,10 +3,40 @@
 $appbar-bg-color: #0067a3;
 
 .navbar-app {
-  height: $navbar-app-height;
-  padding-left: $gap;
+  max-height: $navbar-app-height;
+  padding: 6px 4px;
   display: flex;
   align-items: center;
   background-color: $appbar-bg-color;
   font-size: 1.5rem;
+  .navbar-logo {
+    padding: 0 6px;
+    border-radius: 3px;
+    margin-top: 1px;
+    display: block;
+    position: relative;
+    flex-grow: 1;
+    .logo-loading {
+      width: 75px;
+      height: 15px;
+      padding: 8px 0;
+      margin: 0;
+      &:before {
+        content: '';
+        background-image: url(https://a.trellocdn.com/prgb/dist/images/header-logo-spirit.d947df93bc055849898e.gif);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover:before {
+        cursor: pointer;
+        background-image: url(https://a.trellocdn.com/prgb/dist/images/header-logo-spirit-loading.87e1af770a49ce8e84e3.gif);
+      }
+    }
+  }
 }
